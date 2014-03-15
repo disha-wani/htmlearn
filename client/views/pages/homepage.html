@@ -1,0 +1,62 @@
+<template name="homepage">
+<div class="container">
+
+	{{#if isLoggedIn}}
+		
+	{{else}}
+		<div class="alert alert-danger"><strong>Uh Oh!</strong> To view all content, please login.</div>
+	{{/if}}
+
+
+
+	<div class="jumbotron">
+
+		<div class="row">
+			
+			<div class="col-md-12" >
+				<br>
+				<h1>HTMLearn</h1>
+				<p >Learn HTML, CSS, Javascript today!</p>
+				<br>
+			</div>
+		
+		</div>
+
+		
+
+	</div>
+
+	<h1> Quick Links: </h2>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>Lessons</h3>
+					<p>Learn at your own pace</p>
+					<p><a href="#" class="btn btn-primary" role="button">Go There</a> 
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 ">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>Competitions</h3>
+					<p>Compete against other HTMLearners to see who's best!</p>
+					<p><a href="#" class="btn btn-primary" role="button">Go There</a> 
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 ">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>Reference Guide</h3>
+					<p>Quick reference guide to refer to whenever you get stuck</p>
+					<p><a href="#" class="btn btn-primary" role="button">Go There</a> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</template>
