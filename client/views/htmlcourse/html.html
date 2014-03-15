@@ -1,0 +1,55 @@
+<template name="html">
+<div class="container">
+
+
+	<h1>Lessons:</h1>
+
+	<br>
+
+			
+				
+			
+
+	<table class="table table-bordered">
+	<tr>
+		<th> Lesson # </th>
+		<th> Name </th>
+		<th> Status </th>
+	</tr>
+  	<tr>
+  		<td> 1 </td>
+  		<td> First Step in HTML </td>
+  		<td> <button href="{{pathFor 'html1'}}" type="button" class="btn btn-default">Start</button> </td>
+  	</tr>
+  	<tr>
+  		<td> 3 </td>
+  		<td> Headers </td>
+  		<td> <button href="{{pathFor 'html2'}}" type="button" class="btn btn-default">Start</button> </td>
+  	</tr>
+  	<tr>
+  		<td> 3 </td>
+  		<td> Paragraphs </td>
+  		<td> <button href="{{pathFor 'html3'}}" type="button" class="btn btn-default">Start</button> </td>
+  	</tr>
+	</table>
+
+		
+	
+
+
+
+
+</div>
+
+
+</template>
+
+
+
+<template name="aceEditor">
+{{#constant}}
+<div id='aceEditor'>
+
+</div>
+{{/constant}}
+</template>

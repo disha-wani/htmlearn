@@ -69,6 +69,13 @@ Router.map(function() {
     path: '/'
   });
 
+  this.route('html');
+
+
+  this.route('html1', {
+    path: '/html/html1/'
+  });
+
 
 
   this.route('about');
