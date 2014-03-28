@@ -1,11 +1,12 @@
 {
   "meteor": {},
   "packages": {
-    "iron-router": {},
     "bootstrap-3": {},
     "router": {},
     "blog": {},
-    "chatworks": {},
-    "fast-render": {}
+    "fast-render": {},
+    "animate-css": {},
+    "scss": {},
+    "inject-initial": {}
   }
 }

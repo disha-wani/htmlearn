@@ -8,6 +8,7 @@ All publications-related code.
 
 // Publish all items
 
+
 Meteor.publish('allItems', function() {
   return Items.find();
 });
