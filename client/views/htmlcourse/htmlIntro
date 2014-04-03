@@ -1,0 +1,101 @@
+<template name="html1">
+<div class="container">
+	<h1>Excersice 1: Getting Started with HTML</h1>
+	<div class="row">
+		<div class="col-lg-12">
+	
+
+	<h6> Exercise </h6>
+
+	<p>Write an HTML document in the editor to the right titled "My personal website" whose body has the following:</p>
+	<ul>
+		<li>A big heading that says "Welcome to my humble abode in the tubes!" You will need the h1 tag for this.</li>
+
+		<li>After that, write a small autobiography in paragraph form.</li>
+	</ul>
+	<p>Whatever you write in the editor will be displayed in the tiny web browser on the right of the editor. All web development actually happens this way--a programmer will edit their HTML files in an editor, save then, and refresh the browser to see the results. Except we'll make it easier for you--whatever you type in will be graded and displayed in real time. Once you get the right answer, you can move on. Good luck!</p>
+</div>
+		
+		<div class="col-md-6 animated fadeInRight">
+			{{> aceEditor1}}
+
+		</div>
+		<div class="col-md-6">
+			<div class="chrome-window animated fadeInLeft">
+      			<iframe id="preview"></iframe>
+    		</div>
+
+
+			
+		</div>
+
+		<div class="col-md-6">
+			<button type="button" id="checkmycode" class="btn btn-success">
+	Check Code
+	</button>
+
+
+			
+		</div>
+
+			
+	</div>
+	
+
+	<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</div>
+</template>
+<template name="aceEditor1">
+{{#constant}}
+<div id='aceEditor1'>
+</div>
+{{/constant}}
+</template>

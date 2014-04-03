@@ -70,10 +70,26 @@ Router.map(function() {
   });
 
   this.route('html');
+  this.route('css');
 
 
-  this.route('html1', {
-    path: '/html/html1/'
+
+  for(i = 1; i < 2; i++)
+  {
+    this.route('html' + i, {
+      path: '/html/html' + i + '/'
+    });
+  }
+
+  for(i = 1; i < 2; i++)
+  {
+    this.route('css' + i, {
+      path: '/css/css' + i + '/'
+    });
+  }
+
+this.route('htmlIntro', {
+    path: '/html/htmlIn'
   });
 
 

@@ -1,0 +1,48 @@
+<template name="htmlIntro">
+<div class="container">
+	<h1>Introduction 1: What in the world is HTML?</h1>
+	
+	<h6> HTML and the Tag </h6>
+	<p>HTML (Hypertext Markup Language in fancy talk) is a language used to describe webpages for any web browser in the world! HTML uses the concept of <i>elements</i>. An element consists of <i>content</i> and a set of opening and closing <i>tags</i>.</p>
+
+	<code> &lt;element&gt; content &lt;&#47;element&gt; </code>
+
+	<br>
+
+	<p>The tags, which are marked with angle brackets, describe what kind of content you want the browser to show. The content in the middle is what you actually want to show.</p>
+
+	<h6> A Shiny, New HTML Document! </h6>
+	<p>Consider the following HTML file.</p>
+	
+	<pre>
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt; My first HTML Doc! &lt;&#47;title&gt;
+	&lt;&#47;head&gt;
+	&lt;body&gt;
+		&lt;p&gt; Hello, World! &lt;&#47;p&gt;
+	&lt;&#47;body&gt;
+&lt;&#47;html&gt;
+	</pre>
+
+	<p>You'll find that most HTML documents look like this. Can you spot the tags? Let's go step-by-step.</p>
+
+	<p>The html tags tell the browser "Hey, HTML document incoming!" so it doesn't mistake your webpage for a turtle.</p>
+
+	<p>The head tags give the header of the document; they tell the browser some information about it, like what title for the browser bar to use (aptly marked by the title tags).</p>
+
+	<p>The body tags tell the browser that whatever inside it is the actual meat of the document. You typically want all of your stuff to go inside the body tags. In our small document here, the p tag stand for paragraph, so they show text.</p>
+
+	<p>Now that you've had a chance to see a real HTML document in the wild, try the following exercise!</p>
+
+	<a href="{{pathFor 'html1'}}" >Start Exersice!</a>
+
+
+
+
+
+</div>
+
+</div>
+
+</template>
