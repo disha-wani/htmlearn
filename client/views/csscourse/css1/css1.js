@@ -4,20 +4,20 @@ Template.cssEditor1.rendered = function() {
   cssEditor.getSession().setMode("ace/mode/css");
   cssEditor.setHighlightActiveLine(true);
   cssEditor.getSession().setUseWorker(true);
-  cssEditor.setValue("<html> \n <body> ");
+  cssEditor.setValue("i {\ncolor: blue;\n} ");
 
   var htmlEditor = ace.edit("htmlEditor1");
   htmlEditor.setTheme("ace/theme/twilight");
   htmlEditor.getSession().setMode("ace/mode/html");
   htmlEditor.setHighlightActiveLine(true);
   htmlEditor.getSession().setUseWorker(true);
-  htmlEditor.setValue("<html> \n <body> ");
+  htmlEditor.setValue("<html> \n <body> \n \t<h1>Hello world!</h1> \n \t<p>I'm feeling a bit <i>blue</i>...</p>\n</body>\n</html>");
 
 
   $(document).ready(function(){
     onload=(document).onkeyup=function(){
       (document.getElementById("preview").contentWindow.document).write(
-      htmlEditor.getValue()+"<style>"+cssEditors.getValue()+"<\/style><script>"+"<\/script>"
+      htmlEditor.getValue()+"<style>"+cssEditor.getValue()+"<\/style><script>"+"<\/script>"
     );
 
     (document.getElementById("preview").contentWindow.document).close();
