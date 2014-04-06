@@ -89,7 +89,11 @@ Router.map(function() {
   }
 
 this.route('htmlIntro', {
-    path: '/html/htmlIn'
+    path: '/html/htmlIntro'
+  });
+
+this.route('cssIntro', {
+    path: '/css/cssIntro'
   });
 
 

@@ -1,0 +1,75 @@
+<template name="cssIntro">
+<div class="container">
+	<h1>Introduction: CS.. What?</h1>
+	<div class="row">
+		<div class="col-md-12">
+    <p>An introduction to CSS.</p>
+    
+    <h4>Welcome to the CSS lesson path!</h4>
+    <p>We suggest that you've taken a look at at least a few of the HTML lessons before coming here so that you understand the elements you're styling.</p>
+    
+    <h4>What is CSS?</h4>
+    <p><b>CSS</b>, or <b>Cascading Style Sheets</b>, are a way of telling the browser how elements should be displayed.  For example, you could use CSS to change the color of a <code>&lt;div&gt;</code> or to change an element's text alignment.</p>
+    <p>They are referred to as "cascading" because of the way that a browser evaluates the rules you give it; if multiple conflicting rules are applied to a single element, the browser <i>cascades</i> to the most specific rule and chooses that one.</p>
+    <p>Enough background, let's dive right in!</p>
+    
+    <h4>Setting up Your Document</h4>
+    <p>There are two ways to set up CSS - it can either be done in a <code>&lt;style&gt;</code> tag or within another file and linked to with <code>&lt;link&gt;</code>.  We've saved you the trouble of linking and have done that in the background for you; however, if you build your own site, don't forget to include the link!</p>
+    
+    <p><i>Note: the link you need will look something like this - <code>&lt;link href="/path/to/style.css" rel="stylesheet" /&gt;</code></i></p>
+    
+    <h4>Let's get started!</h4>
+    <p>Click on the "next" button to continue.</p>
+</div>
+		
+		<div class="col-md-6 animated fadeInRight">
+				<!-- Nav tabs -->
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="htmlTab">{{> htmlEditorIn}}</div>
+  <div class="tab-pane" id="cssTab">{{> cssEditorIn}}</div>
+
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#htmlTab" data-toggle="tab">HTML</a></li>
+  <li><a href="#cssTab" data-toggle="tab">CSS</a></li>
+ 
+</ul>
+			
+		</div>
+		<div class="col-md-6">
+			<div class="chrome-window animated fadeInLeft">
+      			<iframe id="preview"></iframe>
+    		</div>
+			
+		</div>
+	</div>
+	<br>
+	<a href="{{pathFor 'css1'}}" id="checkmycode" class="btn btn-info">
+	Continue to Excercise 1
+	</a>
+
+	
+
+
+
+</div>
+
+</template>
+
+<template name="cssEditorIn">
+{{#constant}}
+<div id='cssEditorIn' class="aceEditor">
+</div>
+{{/constant}}
+</template>
+
+<template name="htmlEditorIn">
+{{#constant}}
+<div id='htmlEditorIn' class="aceEditor">
+</div>
+{{/constant}}
+</template>
