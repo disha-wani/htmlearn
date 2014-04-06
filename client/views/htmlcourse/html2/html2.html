@@ -1,0 +1,107 @@
+<template name="html2">
+	<div class="container">
+	<h1>Excersice 1: Getting Started with HTML</h1>
+		<div class="row">
+			<div class="col-md-12">
+			<h3> The Art of Texting </h3>
+			<h6> Headings </h6>
+			If you remember in the last exercise, you used the h1 tag to make a big heading for your webpage. However, HTML also offers 5 other levels of smaller headings at your disposal. They're called h2, h3, h4, h5, and h6.
+			<br>
+			<br>
+				<div class="well">
+				<h1 style="margin-top: 3px;"> h1 heading! </h1>
+				<h2> h2 heading! </h2>
+				<h3> h3 heading! </h3>
+				<h4 style="text-decoration: none"> h4 heading! </h2>
+				<h5> h5 heading! </h5>
+				<h6> h6 heading! </h6>
+			</div>
+			<h4> Be Bold, Be Brave, Be ... Italic?</h4>
+			Bolded text can be marked by enclosing elements with b tags, and italic text with the i tag. For example
+			<code>I am &lt;b&gt;brave&lt;/b&gt; and &lt;i&gt; italic &lt;/i&gt;.</code>
+			Produces:
+			<br><br>
+				<div class="well">
+				I am <b>brave</b> and <i> italic </i>.
+			</div>
+			<h4> Line Breaks and Special Tags </h4>
+			To space out text, you can insert line breaks between paragraphs with the br tag. However, it doesn't look exactly like you'd think it would. For example:
+			<code>Hello, &lt;br /&gt; there</code>
+			is:
+			<br><br>
+				<div class="well">
+				Hello, <br /> there
+			</div>
+			The tag closes itself instead of having a separate closing tag.
+			<h4> Exercise </h4>
+			Show off your artsy side! Format your autobiography with bolded and italicized text.
+		</div>
+		
+			<div class="col-md-6">
+			{{> aceEditor2}}
+		</div>
+			<div class="col-md-6">
+				<div class="chrome-window animated fadeInLeft">
+				<iframe id="preview"></iframe>
+			</div>
+			
+		</div>
+			<div class="col-md-6">
+			<button type="button" id="checkmycode" class="btn btn-success">
+			Check Code
+			</button>
+			
+		</div>
+		
+	</div>
+	
+		<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+					<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+				</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+					<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+					<li>Placing all your items in the correct order </li>
+					<li>Using the correct text in an element when specified</li>
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+<template name="aceEditor2">
+{{#constant}}
+	<div id='aceEditor2' class='aceEditor'>
+</div>
+{{/constant}}
+</template>

@@ -1,0 +1,134 @@
+<template name="html4">
+	<div class="container">
+	<h1>Excersice 4: A Few Datums More!</h1>
+		<div class="row">
+			<div class="col-md-12">
+	<h4> Lists </h4>
+	Maybe you'll want to list out some information in your website. There are two types that HTML describes: ordered and unordered lists. Ordered lists use the ol tag and are numbered, and unordered ones use the ul tag and are bulleted. To put items in a list, demarcate them with the li tags. For example, the following:
+	<br><br>
+	<code style="display: block">
+		&lt;ol&gt; <br>
+		&thinsp;&lt;li&gt;First!&lt;/li&gt; <br>
+		&thinsp;&lt;li&gt;Second...&lt;/li&gt; <br>
+		&thinsp;&lt;li&gt;Third :(&lt;/li&gt; <br>
+		&lt;/ol&gt;
+	</code>
+	<br>
+	Produces:
+	<br><br>
+		<div class="well">
+			<ol><li>First!</li><li>Second...</li><li>Third :(</li></ol>
+		</div>
+Replace <code>ol</code> with <code>ul</code> and you get:
+<br><br>
+<div class="well">
+<ul><li>First!</li><li>Second</li><li>Third</li></ul>
+</div>
+<h4> Tables </h4>
+To have fancier data, you can use a table. Declare tables with the table tag, and inside declare columns with the tr tag. Inside the tr's, put rows with the td tag. 
+<br>For example:
+<br><br>
+<code style="display: block">
+&lt;table&gt; <br>
+&thinsp; &lt;tr&gt; <br>
+&thinsp;&thinsp; &lt;td&gt;Name&lt;/td&gt; <br>
+&thinsp;&thinsp; &lt;td&gt;Age&lt;/td&gt; <br>
+&thinsp;&thinsp; &lt;td&gt;Favorite Game&lt;/td&gt; <br>
+&thinsp; &lt;/tr&gt; <br>
+&thinsp;&lt;tr&gt;<br>
+&thinsp;&thinsp; &lt;td&gt;John&lt;/td&gt;<br>
+&thinsp;&thinsp; &lt;td&gt;25&lt;/td&gt;<br>
+&thinsp;&thinsp; &lt;td&gt;Chess&lt;/td&gt;<br>
+&thinsp; &lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+</code>
+<br>
+Produces: 
+<br><br>
+	<div class="well">
+		<table class="table table-bordered">
+			<tr>
+			<td>Name</td>
+			<td>Age</td>
+			<td>Favorite Game</td>
+			</tr>
+			<tr>
+			<td>John</td>
+			<td>25</td>
+			<td>Chess</td>
+			</tr>
+		</table>
+	</div>
+Phew! You've finally finished HTML. Now to make that markup look pretty, head over to the CSS tutorial.
+</div>
+		
+			<div class="col-md-6 animated fadeInRight">
+			{{> aceEditor4}}
+		</div>
+			<div class="col-md-6">
+				<div class="chrome-window animated fadeInLeft">
+				<iframe id="preview"></iframe>
+			</div>
+			
+		</div>
+			<div class="col-md-6">
+			<button type="button" id="checkmycode" class="btn btn-success">
+			Check Code
+			</button>
+			
+		</div>
+		
+	</div>
+	
+		<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+					<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+				</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button href="{{pathFor 'html2'}}" type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+					<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+					<li>Placing all your items in the correct order </li>
+					<li>Using the correct text in an element when specified</li>
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+
+<template name="aceEditor4">
+{{#constant}}
+	<div id='aceEditor4' class='aceEditor'>
+</div>
+{{/constant}}
+</template>

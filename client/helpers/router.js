@@ -74,14 +74,14 @@ Router.map(function() {
 
 
 
-  for(i = 1; i < 2; i++)
+  for(i = 1; i < 5; i++)
   {
     this.route('html' + i, {
       path: '/html/html' + i + '/'
     });
   }
 
-  for(i = 1; i < 2; i++)
+  for(i = 1; i < 5; i++)
   {
     this.route('css' + i, {
       path: '/css/css' + i + '/'

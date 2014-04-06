@@ -1,0 +1,99 @@
+<template name="html3">
+	<div class="container">
+	<h1>Excersice 3: Link me up, Scotty!</h1>
+		<div class="row">
+			<div class="col-md-12">
+	<h4> Links and Attributes </h4>
+	Sometimes you'll want to link to another website from your own. To do that, you need to use the a tag. To do so, you need the a tag. Consider the following: <br>
+
+	<code>&lt;a href="http://www.htmlearn.net"&gt;The best website in the world!&lt;/a&gt;</code>
+	<br>
+	This produces:
+	<br><br>
+	<div class = "well">
+		<a href="http://www.htmlearn.net">The best website in the world!</a>.
+	</div>
+	The weird href thing is called an <i>attribute</i>, which defines some properties about a tag. In this case, it's telling the browser to which link should the text "The best website in the world!" display.
+	<h4> Embedded Images </h4>
+	Putting images in your website follows a similar technique, but you must use the img tag. The following code shows the picture of a cat!
+	<code>&lt;img src="http://i.imgur.com/xKE07.jpg" alt="A kitten should've been here"&gt;</code>
+		<br><br>
+
+	<div class="well">
+	<img src="http://i.imgur.com/xKE07.jpg" height="200" width="200" alt="A kitten should've been here">
+	</div>
+	Notice that there is no closing tag at all! The src attribute gives the location of the image, and the alt attribute gives text that would be replaced by the image in the event that the image can't load. Height and width size the picture in pixels.
+	<h4> Exercise </h4>
+	Place a link to your favorite website and an image in your website!
+</div>
+		
+			<div class="col-md-6 animated fadeInRight">
+			{{> aceEditor3}}
+		</div>
+			<div class="col-md-6">
+				<div class="chrome-window animated fadeInLeft">
+				<iframe id="preview"></iframe>
+			</div>
+			
+		</div>
+			<div class="col-md-6">
+			<button type="button" id="checkmycode" class="btn btn-success">
+			Check Code
+			</button>
+			
+		</div>
+		
+	</div>
+	
+		<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+					<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+				</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button href="{{pathFor 'html2'}}" type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+					<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+					<li>Placing all your items in the correct order </li>
+					<li>Using the correct text in an element when specified</li>
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+
+<template name="aceEditor3">
+{{#constant}}
+	<div id='aceEditor3' class='aceEditor'>
+</div>
+{{/constant}}
+</template>

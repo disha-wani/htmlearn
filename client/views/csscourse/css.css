@@ -1,4 +1,4 @@
-textarea {
+/*textarea {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   width: 100%;
   min-height: 400px;
@@ -25,7 +25,7 @@ textarea:focus {
 
 textarea#js {
   margin: 15px 0 0 0;
-}
+}*/
 
 /*iframe {
   width: 100%;
