@@ -1,0 +1,50 @@
+<template name="css4">
+<div class="container">
+	<h1>Exercise 4: Divs, Spans, and Sizing</h1>
+	<div class="row">
+		<div class="col-md-12">
+    <p>Learn about two important elements in styling, divs and spans.</p>
+    
+    <h4>Intro</h4>
+    <p>You may have noticed in the past couple of sections that we were using some elements that hadn't been mentioned before - <code>&lt;div&gt;</code>s and <code>&lt;span&gt;</code>s.</p>
+    <p>The reason that we haven't mentioned these until now is that they're generally only useful when it comes to styling.  Both have no default styles, so they're very versatile for use in styling pages.</p>
+    
+    <h4>Divs</h4>
+    <p>The <code>&lt;div&gt;</code> element is used to contain elements in a <b>block</b> container.  A block is a type of HTML display that has a few properties, including that the container will always have a line break after it.  Divs are often helpful for styling things such as images.  (For example, a single <code>&lt;div&gt;</code> may contain an image and its caption.)</p>
+    
+    <h4>Spans</h4>
+    <p>The <code>&lt;span&gt;</code> element is similar to a div, but is used for inline styling.  For instance, before we used it to color certain sections of text.  You can also think of the <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags as variants of the <code>&lt;span&gt;</code> tag that have the default styles of bolding and italicizing.</p>
+    
+    <h4>Sizing</h4>
+    <p>For many elements (especially <code>&lt;div&gt;</code>s) it's helpful to be able to size the elements with which you're working.</p>
+    <p>The sizing of an HTML element has four parts - its width and height, its padding, its border, and its margin.</p>
+    <p>The innermost part, the <b>width and height</b>, do exactly what they sound like - they allow you to set the width and height of the element.  The properties used to do this are <code>width</code> and <code>height</code>.</p>
+    <p>Outside of the width and height is the <b>padding</b>.  Padding allows you to put space between the inside of an element and its border (for example, to put spacing between the text of a <code>&lt;div&gt;</code> and its border).  The associated properties for padding are <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
+    <p>The next layer of the onion is the <b>border</b>.  At its simplest, the border is just the outline of the element, though it can have color, dashing, and heavier weight as well.  By default, the vast majority of elements have no border.  The properties to style border use the same naming convention as padding.</p>
+    <p>Finally, <b>margin</b> is spacing outside of the border that can be used to add space between elements.  For example, you could use a margin to add additional space between paragraphs.  The properties for margin follow the -top, -right, -left, -bottom convention used by the others.</p>
+    
+    <h4>Measurement Units</h4>
+    <p>There are a variety of ways to set the values of these sizes, but in these tutorials we're only going to stick to two of them - pixels and percentage.  To set the size of something in pixels, use <code>px</code> to denote your units - for example, to set the width of something to 50 pixels, use <code>width: 50px;</code>.  (Note that there is no space between the number and px.)</p>
+    <p>Similarly, to give a size by percentage just follow the value with the percent sign: <code>width: 50%;</code>.  Keep in mind that the percentage is measured as a percentage of the size of the element's parent, so the actual size of the page is dependent on the size of the containing element.</p>
+    
+    <h4>Condensed Styling</h4>
+    <p>An alternative to using the -top, -right, -bottom, and -left properties is to use the condensed version of the rule.  If all of the paddings, are the same, you can use <code>padding: [size for all];</code> to set all of them to that size.  Using two parameters gives <code>padding: [top/bottom] [right/left];</code>, three parameters gives <code>padding: [top] [right/left] [bottom];</code> and using four arguments corresponds to <code>padding: [top] [right] [bottom] [left];</code>.  You can even mix pixel and percentage units within these.</p>
+
+    <br><p>No exersice with this one, so make sure you have these concepts down! We'll be using them extensively in the next exersices.
+    </p> 
+</div>
+		
+		
+
+
+
+</div>
+
+<a href="{{pathFor 'css5'}}" class="btn btn-info">
+	Continue to Excercise 5
+	</a>
+
+</div>
+
+</template>
+

@@ -6,15 +6,16 @@ Template.aceEditor2.rendered = function() {
   editor.getSession().setUseWorker(true);
   editor.setValue("<html>\n    <head>\n        <title></title>\n    </head>\n\n    <body>\n        <h1></h1>\n        <p></p>\n    </body>\n</html> ");
 
-  
-  
+
+
+
+
+
+
+
 
 
   $(document).ready(function(){
-
-    // $( ".modal-backdrop" ).remove();
-
-
    
 
     onload=(document).onkeyup=function(){
@@ -34,7 +35,7 @@ Template.aceEditor2.rendered = function() {
       // var last = str.substring(str.length-19,str.length);
       // console.log("strip: "+ str + "  First:" + first + "   Last: " + last);
       //if(first == "<html><body><h1>" && last == "</h1></body></html>")
-      if(str.match(/<html><head><title>.*<\/title><\/head><body><h1>AboutMe!<\/h1><p>.*<\/p><\/body><\/html>/))
+      if(str.match(/<html>.*<body>.*<b>.*<\/b><i>.*<\i>.*<\/body><\/html>/))
       {
         $('#modalPass').modal('show')
       }

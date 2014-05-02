@@ -1,17 +1,18 @@
-Template.cssEditor2.rendered = function() {
-  var cssEditor = ace.edit("cssEditor2");
+Template.cssEditor7.rendered = function() {
+  var cssEditor = ace.edit("cssEditor7");
   cssEditor.setTheme("ace/theme/twilight");
   cssEditor.getSession().setMode("ace/mode/css");
   cssEditor.setHighlightActiveLine(true);
   cssEditor.getSession().setUseWorker(true);
-  cssEditor.setValue("/*Type your CSS Here*/");
+  cssEditor.setValue("div { \n }");
 
-  var htmlEditor = ace.edit("htmlEditor2");
+  var htmlEditor = ace.edit("htmlEditor7");
   htmlEditor.setTheme("ace/theme/twilight");
   htmlEditor.getSession().setMode("ace/mode/html");
   htmlEditor.setHighlightActiveLine(true);
   htmlEditor.getSession().setUseWorker(true);
-  htmlEditor.setValue("<html>\n<body>\n<div>This text should be red</div>\n<p class='blue'>This should be blue</p>\n<div>\nThis should also be red...\n<p id='green'>but this should be green.</p>\n</div>\n</body>\n</html>");
+  htmlEditor.setValue("<html>\n    <body>\n        <div>Try styling this text!</div>\n    </body>\n</html>\n");
+
 
 
   $(document).ready(function(){

@@ -28,7 +28,7 @@ Template.aceEditor4.rendered = function() {
       // var last = str.substring(str.length-19,str.length);
       // console.log("strip: "+ str + "  First:" + first + "   Last: " + last);
       //if(first == "<html><body><h1>" && last == "</h1></body></html>")
-      if(str.match(/<html><head><title>.*<\/title><\/head><body><h1>AboutMe!<\/h1><p>.*<\/p><\/body><\/html>/))
+      if(str.match(/<html>.*<body><table><tr><td>.*<\/td><td>.*<\/td><td>.*<\/td><\/tr><tr><td>.*<\/td><td>.*<\/td><td>.*<\/td><\/tr><\/table><\/body><\/html>/))
       {
         $('#modalPass').modal('show')
       }

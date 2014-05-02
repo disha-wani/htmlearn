@@ -1,0 +1,114 @@
+<template name="css5">
+<div class="container">
+	<h1>Exercise 5: Learn to Float</h1>
+	<div class="row">
+		<div class="col-md-12">
+    <p>Learn about using floats to style divs and allow text to wrap around it.</p>
+    
+    <h4>Whatever floats your boat</h4>
+    <p>Until now, we've been more or less sticking to only one styling property - <code>color</code>.  Now we're going to introduce another that's very helpful with creating layouts, <code>float</code>.</p>
+    <p>The purpose of floats are to create areas around which text can wrap.  For example, consider a magazine - often, there will be images and captions off to one side, and the text will wrap around it.</p>
+    <p>There are three possible values for the <code>float</code> property: <code>left</code>. <code>right</code>, or <code>none</code>.  How these function is more or less self-explanatory - <code>float: left</code> floats left, <code>float: right</code> floats right, and <code>float: none</code> causes no float to occur.</p>
+    
+    <h4>Your Turn</h4>
+    <p>The HTML for this exercise is already written for you.  Your job is to make the div containing the image and the caption (which has a class of <code>image-container</code> to float to the left.  Also give it a border of <code>1px solid black</code>, and have spacing around the border on both the inside and outside of the <code>div</code> of 4 pixels.</p>
+</div> 
+		
+		<div class="col-md-6 animated fadeInRight">
+				<!-- Nav tabs -->
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="htmlTab">{{> htmlEditor5}}</div>
+  <div class="tab-pane" id="cssTab">{{> cssEditor5}}</div>
+
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#htmlTab" data-toggle="tab">HTML</a></li>
+  <li><a href="#cssTab" data-toggle="tab">CSS</a></li>
+ 
+</ul>
+			
+		</div>
+		<div class="col-md-6">
+			<div class="chrome-window animated fadeInLeft">
+      			<iframe id="preview"></iframe>
+    		</div>
+			
+		</div>
+	</div>
+	<br>
+	<!-- <button type="button" id="checkmycode" class="btn btn-success">
+	Check Code
+	</button> -->
+
+	<a href="{{pathFor 'css6'}}" class="btn btn-info">
+	Continue to Excercise 6
+	</a>
+
+	<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+</template>
+
+<template name="cssEditor5">
+{{#constant}}
+<div id='cssEditor5' class="aceEditor">
+</div>
+{{/constant}}
+</template>
+
+<template name="htmlEditor5">
+{{#constant}}
+<div id='htmlEditor5' class="aceEditor">
+</div>
+{{/constant}}
+</template>

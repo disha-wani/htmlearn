@@ -1,0 +1,132 @@
+<template name="css8">
+<div class="container">
+	<h1>Exercise 8: Design and Organization</h1>
+	<div class="col-md-12">
+    <p>A few tips</p>
+    
+    <h4>You made it!</h4>
+    <p>This is the end of the CSS section - for now, anyway.  More content may be added in the future, but for now, this is it!</p>
+    <p>We wanted to provide you with some parting words on how to use your new skills.  Let's dive right in:</p>
+    
+    <h4>Design Ideas</h4>
+    <ul>
+        <li><b>Keep It Simple.</b>  The most memorable sites consist of only a few colors, and generally don't have any crazy shapes.</li>
+        <li><b>Keep It Clean.</b>  "Flat" design, or not using gradients or shadows to portray depth, is all the rage as of late.  Try to pick a few colors and build a flat design next time you design a site.</li>
+        <li><b>Keep It Consistent.</b>  It's easy to get drawn in and make all of your pages different, but it's important to avoid this to make your pages look cohesive.  Try to use the same colors, fonts, and styles on every page of a site.</li>
+        <li><b>Keep It Friendly.</b>  Mobile-friendly, that is.  Try to make your sites usable on devices with smaller screens by avoiding structures with fixed widths.  Also use CSS media queries (likely the topic of a future lesson) to detect on what kind of device your page is being viewed.</li>
+    </ul>
+    
+    <h4>Content Organization</h4>
+    <ul>
+        <li><b>Headers are your friends...</b>  Use <code>h1</code>, <code>h2</code>, and <code>h3</code> to make it clear to the reader what it is they're reading about.</li>
+        <li><b>...but don't overuse them.</b>  Going too deap with headers can just make the reader confused.  Try to avoid going more than three levels deep, except for special cases (for example, you could make your sidebar headings <code>h4</code>).</li>
+        <li><b>Don't be afraid to make more pages!</b>  If you're talking about something very different than you were at the top of the page, it's probably time to make a new one.  Make sure your content matches your headers.</li>
+        <li><b>Put pages into groups.</b>  For example, all of the CSS lessons on this site have similar themes, so they're all under a single CSS grouping.  Try to keep similar information all together in one central location.</li>
+    </ul>
+    
+    <h4>Go on and explore!</h4>
+    <p>Finally, remember, the best way to learn is by doing!  Don't be afraid to get your proverbial hands dirty and just tinker around with some HTML and CSS!</p>
+    <p><b>Happy coding!</b></p>
+</div>    
+		
+		<div class="col-md-6 animated fadeInRight">
+				<!-- Nav tabs -->
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="htmlTab">{{> htmlEditor8}}</div>
+  <div class="tab-pane" id="cssTab">{{> cssEditor8}}</div>
+
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#htmlTab" data-toggle="tab">HTML</a></li>
+  <li><a href="#cssTab" data-toggle="tab">CSS</a></li>
+ 
+</ul>
+<br>
+	<a href="{{pathFor 'css'}}" class="btn btn-info">
+	Return to All CSS Lessons
+	</a>		
+		</div>
+		<div class="col-md-6">
+			<div class="chrome-window animated fadeInLeft">
+      			<iframe id="preview"></iframe>
+    		</div>
+			
+		</div>
+
+
+	</div>
+	<br>
+	<!-- <button type="button" id="checkmycode" class="btn btn-success">
+	Check Code
+	</button> -->
+
+	
+
+	<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+</template>
+
+<template name="cssEditor8">
+{{#constant}}
+<div id='cssEditor8' class="aceEditor">
+</div>
+{{/constant}}
+</template>
+
+<template name="htmlEditor8">
+{{#constant}}
+<div id='htmlEditor8' class="aceEditor">
+</div>
+{{/constant}}
+</template>

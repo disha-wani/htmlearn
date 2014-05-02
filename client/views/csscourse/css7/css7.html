@@ -1,0 +1,127 @@
+<template name="css7">
+<div class="container">
+	<h1>Exercise 6: More Properties</h1>
+	<div <div class="col-md-12">
+    <p>Let's get stylin'!</p>
+    
+    <h6>Text Properties</h6>
+    <p>So far, pretty much the only property we've been styling is <code>color</code>, which tells the browser in what color text should be rendered.  However, there are many more properties of text to style:</p>
+    <ul>
+        <li><code>font-family</code> tells the browser what font should be used.  You can specify a specific font (<code>"Courier New"</code>) or pick a more general category of fonts (<code>monospaced</code>).</li>
+        <li><code>font-size</code> is exactly what it sounds like: how large the font should be.</li>
+        <li><code>font-weight</code> is how heavy the font should be, and takes values in increments of 100 from 100 to 900.  Often, many of these are actually rendered the same, but you can still specify any of them.  Choose 200 for something thin, 500 for normal text, and 800 for bolding.</li>
+        <li><code>text-decoration</code> can add lines through and around your text.  For instance, setting this property to <code>underline</code> will give your text an underline; setting it to <code>line-through</code> will "strike out" your text.</li>
+    </ul>
+    
+    <h6>Background Properties</h6>
+    <ul>
+        <li><code>background-color</code> does exactly what it sounds like it would do - it sets the background color.</li>
+        <li><code>background-image</code> sets the background of an element to an image.  This is used together with <code>background-position</code>, <code>background-size</code>, and <code>background-repeat</code> to position the background within the element.</li>
+        <li><code>background</code> (without an extension) is a shorthand combination for all of these; for example, <code>background: white top left url("image.png") </code> would produce the image "image.png" position in the top left on a white background.</li>
+    </ul>
+    
+    <h6>Give it a Shot</h6>
+    <p>Try styling the text below.  Do whatever you want!</p>
+</div>    
+		
+		<div class="col-md-6 animated fadeInRight">
+				<!-- Nav tabs -->
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="htmlTab">{{> htmlEditor7}}</div>
+  <div class="tab-pane" id="cssTab">{{> cssEditor7}}</div>
+
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#htmlTab" data-toggle="tab">HTML</a></li>
+  <li><a href="#cssTab" data-toggle="tab">CSS</a></li>
+ 
+</ul>
+<br>
+	<a href="{{pathFor 'css8'}}" class="btn btn-info">
+	Continue to Excercise 8
+	</a>		
+		</div>
+		<div class="col-md-6">
+			<div class="chrome-window animated fadeInLeft">
+      			<iframe id="preview"></iframe>
+    		</div>
+			
+		</div>
+
+
+	</div>
+	<br>
+	<!-- <button type="button" id="checkmycode" class="btn btn-success">
+	Check Code
+	</button> -->
+
+	
+
+	<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+</template>
+
+<template name="cssEditor7">
+{{#constant}}
+<div id='cssEditor7' class="aceEditor">
+</div>
+{{/constant}}
+</template>
+
+<template name="htmlEditor7">
+{{#constant}}
+<div id='htmlEditor7' class="aceEditor">
+</div>
+{{/constant}}
+</template>

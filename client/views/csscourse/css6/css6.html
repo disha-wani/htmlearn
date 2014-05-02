@@ -1,0 +1,129 @@
+<template name="css6">
+<div class="container">
+	<h1>Exercise 6: Page Layout</h1>
+	<div class="row">
+		<div class="col-md-12">
+    <p>It's time to set up that main page!</p>
+    
+    <h4>The Primary Structure</h4>
+    <p>Consider most sites.  What do they have in terms of layout?</p>
+    <p>Most sites tend to have a <b>header</b>, a <b>sidebar</b>, a <b>content area</b>, and a <b>footer</b>.  Let's look at how each of these should be styled.</p>
+    
+    <h4>The Header</h4>
+    <p>The header is what goes at the top of the page, and of course refers to the part you can actually see and not the <code>&lt;head&gt;</code> HTML tag for adding site data.  Headers usually contain the site title as well as some basic navigational tools.</p>
+    <p>Your first inclination may be to use a <code>&lt;div&gt;</code>, and that would certainly be a good choice.  However, HTML5 provides us with an even better option: the <code>&lt;header&gt;</code> tag, which acts like a div but is reserved specifically for headers.</p>
+    
+    <h4>The Sidebar</h4>
+    <p>The sidebar is generally what contains extra content that isn't necessarily specific to the page the user is viewing - perhaps containing a slideshow of images or an RSS feed.</p>
+    <p>Unlike the header, HTML5 doesn't specify a specific tag for sidebars, so the best option is to stick with a regular div and give it a class to style it.  Remember from Lesson 5 that you can make a div go to one side using the <code>float</code> property.</p>
+    
+    <h4>The Content Area</h4>
+    <p>Of course, the content area is where the main content for whatever page you're looking at goes.</p>
+    <p>The styling for the content area is very similar to that of the sidebar, but has a couple of major differences.  For one thing, it needs to float in the other direction to pin it to the other side of the page.  It also needs to have a width complimentary to that of the sidebar, so that the two widths add up to the full width of a the page.</p>
+    
+    <h4>The Footer</h4>
+    <p>The final part of the page - the footer - sits at the bottom of the page and generally provides links to important parts of the site as well as copyright information</p>
+    <p>Like the header, the footer now has its own special tag, <code>&lt;footer&gt;</code>.  The default styling is mostly correct, except that there's one small detail regarding the <code>float</code>s we used earlier - since we need the footer to appear below the sidebar and the content, we need to use the <code>clear</code> property to make sure that it doesn't appear next to either of those.</p>
+    
+    <h4>Let's do it</h4>
+    <p>The HTML and the main structure of the CSS are already set up for you.  All you need to do is fill in the missing declarations.  (We've also tossed in some <code>background</code> declarations to make it easier to see where the pieces begin and end.)</p>
+</div>  
+		
+		<div class="col-md-6 animated fadeInRight">
+				<!-- Nav tabs -->
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="htmlTab">{{> htmlEditor6}}</div>
+  <div class="tab-pane" id="cssTab">{{> cssEditor6}}</div>
+
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#htmlTab" data-toggle="tab">HTML</a></li>
+  <li><a href="#cssTab" data-toggle="tab">CSS</a></li>
+ 
+</ul>
+			
+		</div>
+		<div class="col-md-6">
+			<div class="chrome-window animated fadeInLeft">
+      			<iframe id="preview"></iframe>
+    		</div>
+			
+		</div>
+	</div>
+	<br>
+	<!-- <button type="button" id="checkmycode" class="btn btn-success">
+	Check Code
+	</button> -->
+
+	<a href="{{pathFor 'css7'}}" class="btn btn-info">
+	Continue to Excercise 7
+	</a>
+
+	<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+</template>
+
+<template name="cssEditor6">
+{{#constant}}
+<div id='cssEditor6' class="aceEditor">
+</div>
+{{/constant}}
+</template>
+
+<template name="htmlEditor6">
+{{#constant}}
+<div id='htmlEditor6' class="aceEditor">
+</div>
+{{/constant}}
+</template>

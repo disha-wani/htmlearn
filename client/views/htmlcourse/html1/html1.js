@@ -1,12 +1,12 @@
 Template.aceEditor1.rendered = function() {
   var editor = ace.edit("aceEditor1");
-  editor.setTheme("ace/theme/clouds");
+  editor.setTheme("ace/theme/twilight");
   editor.getSession().setMode("ace/mode/html");
   editor.setHighlightActiveLine(true);
   editor.getSession().setUseWorker(true);
   editor.setValue("<html>\n    <head>\n        <title></title>\n    </head>\n\n    <body>\n        <h1></h1>\n        <p></p>\n    </body>\n</html> ");
 
-  
+
   
 
 
@@ -35,7 +35,6 @@ Template.aceEditor1.rendered = function() {
       else
       {
         $('#modalFail').modal('show')
-
       }
       });
   });
