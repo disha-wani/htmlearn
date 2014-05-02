@@ -13,7 +13,7 @@
 
 		<div class="row">
 			
-			<div class="col-md-12" >
+			<div class="col-md-12 text-center" >
 				<br>
 				<h1>HTMLearn</h1>
 				<p >Learn HTML, CSS, Javascript today!</p>
@@ -26,7 +26,59 @@
 
 	</div>
 
-	<h2>Sign Up Today</h2>
+	<div class="row">
+ 		<div class="col-md-4">
+			 <div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">HTML</h3>
+			  </div>
+			  <div class="panel-body">
+			    Learn the <strong>building blocks</strong> of creating webpages. HTML is the first thing you need to learn to create the layout of the webpage. 
+			  </div>
+			</div>
+ 		</div>
+
+ 		<div class="col-md-4">
+ 			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">CSS</h3>
+			  </div>
+			  <div class="panel-body">
+			   Master the <strong>design</strong> element of creating webpages. CSS allows you to create beautiful webpages by styling HTML elements.
+			  </div>
+			</div>
+ 		</div>
+
+ 		<div class="col-md-4">
+ 			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">JavaScript</h3>
+			  </div>
+			  <div class="panel-body">
+			   Create webpages that are <strong>interactive</strong>. JavaScript enables to to allow the user of your webpage to interact with the elements in the browser. 
+			  </div>
+			</div>
+ 		</div>
+
+ 		<div class="col-md-12 text-center">
+ 			<h2>Combine these skills to build <strong>awesome</strong> webpages!</h2>
+
+ 			{{#if isLoggedIn}}
+ 			<br>
+
+ 				<a href="{{pathFor 'lessons'}}" class="btn btn-info btn-large">
+				Go To Lessons
+				</a>
+			{{else}}
+				<h3><strong>Sign Up Today!</strong></h3>
+			{{/if}}
+ 		</div>
+
+
+
+
+ 	</div>
+
 	
 	
 </div>

@@ -1,0 +1,122 @@
+<template name="css3">
+<div class="container">
+	<h1>Exercise 3: Get more classy with selectors</h1>
+	<div class="row">
+		<div class="col-md-12">
+    <p>Combine selectors for more advanced styling.</p>
+    
+    <h4>This AND That</h4>
+    <p>Before, to select all paragraphs, you would use the selector <code>p</code>, and to select all elements with the class <code>blue</code>, you would select <code>.blue</code>.  But how could you select only elements who are both paragraphs AND have class <code>blue</code>?</p>
+    <p>The answer is actually quite simple - <b>CSS selectors can be chained to perform an AND-style operation.</b>  To select all paragraphs with class <code>blue</code>, the selector is <code>p.blue</code>.</p>
+    
+    <h4>This OR That</h4>
+    <p>What if you want to style all elements that are paragraphs, or have the class <code>blue</code>, or both?</p>
+    <p>To perform an OR operation, simply separate the selectors with commas.  The selector for the previous scenario would be <code>p, .blue</code>.</p>
+    
+    <h4>This INSIDE That</h4>
+    <p>Nesting elements in HTML is very important.  For example, take lists - all <code>&lt;li&gt;</code> elements are nested inside of <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> elements.</p>
+    <p>To select an element that is inside of another, use the form <code>[a] [b]</code> (a and b are selectors, separated by a space).  This will select all <code>[b]</code> elements that are contained by <code>[a]</code> elements.  (Keep in mind that <code>[a]</code> and <code>[b]</code> can be any selectors, including class and id selectors.)</p>
+    
+    <h4>Try It Out</h4>
+    <p>Let's see what you can do.  Write a single CSS rule to style all paragraphs with id <code>pretty</code> that are contained by a div of class <code>container</code>, AND also style all span elements.  (The styling itself can be any color of your choice.)</p>
+    <p>In the HTML below, <code>A</code> should be styled because it's a paragraph with id <code>pretty</code> inside a div with class <code>container</code>, <code>B</code> should be styled because it's a span, and C should be left unstyled because although it is a paragraph inside a div with class <code>container</code> it doesn't have the class <code>pretty</code>.</p>
+</div>
+		
+		<div class="col-md-6 animated fadeInRight">
+				<!-- Nav tabs -->
+
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="htmlTab">{{> htmlEditor3}}</div>
+  <div class="tab-pane" id="cssTab">{{> cssEditor3}}</div>
+
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#htmlTab" data-toggle="tab">HTML</a></li>
+  <li><a href="#cssTab" data-toggle="tab">CSS</a></li>
+ 
+</ul>
+			
+		</div>
+		<div class="col-md-6">
+			<div class="chrome-window animated fadeInLeft">
+      			<iframe id="preview"></iframe>
+    		</div>
+			
+		</div>
+	</div>
+	<br>
+	<!-- <button type="button" id="checkmycode" class="btn btn-success">
+	Check Code
+	</button> -->
+
+	<a href="{{pathFor 'css'}}" class="btn btn-info">
+	Return to Lessons
+	</a>
+
+	<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Code is Correct!</p>
+					<p>You can either:</p>
+					<li>Continue to next lesson.</li>
+					<li>Return to play around with code.</li>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Play with Code</button>
+					<button type="button" class="btn btn-primary">Continue to Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Code Results:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Sorry. This is not correct.</p>
+					<p>Look out for: </p>
+					<li>Closing all your elements with &lt;/elementName&gt; </li>
+
+					<br>
+					<p><small>Are you trying out different ideas in your HTML? </small></p>
+					<p><small> Thats great! But first, try to complete the given task so you can get credit. Then you can try out some cool stuff.</small></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Return to lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+</template>
+
+<template name="cssEditor3">
+{{#constant}}
+<div id='cssEditor3' class="aceEditor">
+</div>
+{{/constant}}
+</template>
+
+<template name="htmlEditor3">
+{{#constant}}
+<div id='htmlEditor3' class="aceEditor">
+</div>
+{{/constant}}
+</template>

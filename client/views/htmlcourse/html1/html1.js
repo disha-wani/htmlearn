@@ -1,6 +1,6 @@
 Template.aceEditor1.rendered = function() {
   var editor = ace.edit("aceEditor1");
-  editor.setTheme("ace/theme/twilight");
+  editor.setTheme("ace/theme/clouds");
   editor.getSession().setMode("ace/mode/html");
   editor.setHighlightActiveLine(true);
   editor.getSession().setUseWorker(true);

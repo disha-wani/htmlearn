@@ -1,24 +1,22 @@
-<template name="css1">
+<template name="css2">
 <div class="container">
-	<h1>Exercise 1: Stylish styles have some rules.</h1>
+	<h1>Exercise 2: Get classy with selectors.</h1>
 	<div class="row">
 		<div class="col-md-12">
-    <p>Start to style using CSS rules.</p>
-
-    <br>
+    <p>Style with class and id selectors.</p>
     
-    <h4>The Anatomy of a CSS Rule</h4>
-    <p>A CSS rule tells the browser how to style an element, and consists of two basic parts: the <i>selector</i> and the <i>declarations</i>.  A single CSS rule is formatted like this: <code>[selector] { [declaration] [declaration] ... }</code></p>
+    <h4>Element Selectors</h4>
+    <p>You've already seen element selectors in the previous section.  To recap, element selectors consist of simply the name of the element you wish to style - for example, to style all <code>&lt;p&gt;</code> elements, the selector you need is <code>p</code>.</p>
     
-    <h4>Selectors</h4>
-    <p><b>Selectors</b> are the part of the rule that tell <i>what</i> is being styled.  We'll get into some types of selectors in the next lesson, but for now, let's stick with the most basic - the <i>element selector</i>.  Element selectors select all elements of the type matching their element; for example, the selector <code>p</code> selects all <code>&lt;p&gt;</code> elements.</p>
+    <h4>Class Selectors</h4>
+    <p>Class selectors choose elements by their class attribute.  The format for a class selector is <code>.[class]</code>.  For example, the selector <code>.blue</code> would select <code>&lt;p class="blue"&gt;</code> and <code>&lt;div class="blue"&gt;</code> but not <code>&lt;p class="red"&gt;</code>.</p>
     
-    <h4>Declarations</h4>
-    <p><b>Declarations</b> are the part of the rule that tell <i>how</i> the selected element should be styled.  Their basic structure is <code>[property]: [value];</code>.  Elements have a wide range of properties to style, but to start we'll just start with a simple one: <code>color</code>.  Changing the <code>color</code> property of an element will change the text color within that element (for example, applying <code>color: red;</code> to an element will make all its text red).</p>
+    <h4>ID Selectors</h4>
+    <p>ID selectors function in exactly the same fashion as do class selectors, except that they select based on the id attribute instead of the class attribute.  The format for an id selector is <code>#[id]</code>.</p>
     
-    <h4>Give It a Shot</h4>
-    <p>This may seem like a lot to take in at once, so let's start with something simple.  Format all <code>i</code> elements so that their text is blue.</p>
-	</div>
+    <h4>Give It a Try</h4>
+    <p>Your turn!  Style all of the <code>div</code>s to be colored red, all of the elements with the class <code>blue</code> to be colored blue, and all of the elements with id <code>green</code> to be styled green.</p>
+</div>
 		
 		<div class="col-md-6 animated fadeInRight">
 				<!-- Nav tabs -->
@@ -26,8 +24,8 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div class="tab-pane active" id="htmlTab">{{> htmlEditor1}}</div>
-  <div class="tab-pane" id="cssTab">{{> cssEditor1}}</div>
+  <div class="tab-pane active" id="htmlTab">{{> htmlEditor2}}</div>
+  <div class="tab-pane" id="cssTab">{{> cssEditor2}}</div>
 
 </div>
 
@@ -46,8 +44,12 @@
 		</div>
 	</div>
 	<br>
-	<a href="{{pathFor 'css2'}}" class="btn btn-info">
-	Continue to Excercise 2
+	<!-- <button type="button" id="checkmycode" class="btn btn-success">
+	Check Code
+	</button> -->
+
+	<a href="{{pathFor 'css3'}}" class="btn btn-info">
+	Continue to Excercise 3
 	</a>
 
 	<div class="modal fade" id="modalPass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -101,16 +103,16 @@
 
 </template>
 
-<template name="cssEditor1">
+<template name="cssEditor2">
 {{#constant}}
-<div id='cssEditor1'>
+<div id='cssEditor2' class="aceEditor">
 </div>
 {{/constant}}
 </template>
 
-<template name="htmlEditor1">
+<template name="htmlEditor2">
 {{#constant}}
-<div id='htmlEditor1'>
+<div id='htmlEditor2' class="aceEditor">
 </div>
 {{/constant}}
 </template>

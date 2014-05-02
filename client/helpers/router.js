@@ -81,7 +81,7 @@ Router.map(function() {
     });
   }
 
-  for(i = 1; i < 5; i++)
+  for(i = 1; i < 8; i++)
   {
     this.route('css' + i, {
       path: '/css/css' + i + '/'
